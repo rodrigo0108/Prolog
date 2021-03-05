@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/size_15"
+    app:cardCornerRadius="@dimen/size_17">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_14">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/numberClassTextView"
+            style="@style/style_subtitle_15_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clase 1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/evaluationNameTextView"
+            style="@style/style_description_14_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la evaluación"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberClassTextView" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/evaluationDateImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/evaluationNameTextView"
+            app:srcCompat="@drawable/ic_evaluation_calendar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/evaluationDateTextView"
+            style="@style/style_description_14_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12-02-2020"
+            android:textSize="@dimen/size_13_sp"
+            app:layout_constraintBottom_toBottomOf="@+id/evaluationDateImageView"
+            app:layout_constraintStart_toEndOf="@+id/evaluationDateImageView"
+            app:layout_constraintTop_toTopOf="@+id/evaluationDateImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/numberMarkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_10"
+            android:text="18"
+            style="@style/style_title_secondary_22_bold"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toTopOf="@+id/noteTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/style_title_secondary_15_bold"
+            android:id="@+id/noteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_10_sp"
+            android:text="Nota"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/numberMarkTextView"
+            app:layout_constraintStart_toStartOf="@+id/numberMarkTextView"
+            app:layout_constraintTop_toBottomOf="@+id/numberMarkTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

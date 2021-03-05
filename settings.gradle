@@ -1,0 +1,4 @@
+include ':model'
+include ':appdata'
+include ':app'
+rootProject.name = "Prolog"

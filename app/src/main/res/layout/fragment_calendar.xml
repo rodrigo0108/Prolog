@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/myCoursesTextView"
+        style="@style/style_title_secondary_22_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_22"
+        android:layout_marginTop="@dimen/size_22"
+        android:text="@string/my_calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/monthLinearLayout"/>
+
+    <LinearLayout
+        android:id="@+id/monthLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_22"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/myCoursesTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myCoursesTextView">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/monthTextView"
+            style="@style/style_title_secondary_15_bold"
+            android:textSize="@dimen/size_14_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_6"
+            android:textColor="@color/prolog_primary_color_dark"
+            tools:text="Agosto" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_10"
+            android:src="@drawable/ic_calendar_filter" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_arrow_select" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/legendLayout"
+        layout="@layout/calendar_day_legend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_22"
+        android:layout_marginTop="@dimen/size_22"
+        android:layout_marginEnd="@dimen/size_22"
+        app:layout_constraintTop_toBottomOf="@+id/myCoursesTextView" />
+
+    <com.kizitonwose.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_22"
+        android:layout_marginEnd="@dimen/size_22"
+        app:cv_dayViewResource="@layout/calendar_day_layout"
+        app:cv_orientation="horizontal"
+        app:cv_scrollMode="paged"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/legendLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filterRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_5"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/size_22"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        tools:ignore="RtlSymmetry"
+        tools:listitem="@layout/item_filter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timetableRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size_5"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/size_17"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterRecyclerView"
+        tools:listitem="@layout/item_course_calendar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

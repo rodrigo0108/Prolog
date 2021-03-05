@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/size_20"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bookShapeableImageView"
+        android:layout_width="@dimen/size_119"
+        android:layout_height="@dimen/size_153"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_example"
+        android:layout_marginEnd="14dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/style_subtitle_14_bold"
+        android:id="@+id/titleBookTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Matemática y Verbo"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_marginStart="@dimen/size_5"
+        android:layout_marginEnd="@dimen/size_5"
+        app:layout_constraintStart_toStartOf="@+id/bookShapeableImageView"
+        app:layout_constraintEnd_toEndOf="@+id/bookShapeableImageView"
+        app:layout_constraintTop_toBottomOf="@+id/bookShapeableImageView"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/style_description_11_regular"
+        android:id="@+id/authorBookTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="George R.R. Martin"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="@+id/titleBookTextView"
+        app:layout_constraintEnd_toEndOf="@+id/titleBookTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleBookTextView"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

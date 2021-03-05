@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/prolog_primary_color_dark" />
+    <corners
+        android:bottomLeftRadius="@dimen/size_17"
+        android:bottomRightRadius="@dimen/size_17" />
+</shape>

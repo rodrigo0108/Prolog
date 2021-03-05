@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filterNameTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_filter_selected_calendar"
+    android:backgroundTint="@color/prolog_filter_unselected_color"
+    android:fontFamily="@font/opensans_bold"
+    android:paddingStart="@dimen/size_20"
+    android:paddingTop="@dimen/size_5"
+    android:paddingEnd="@dimen/size_20"
+    android:paddingBottom="@dimen/size_5"
+    android:textColor="@color/prolog_filter_text_unselected_color"
+    android:layout_marginEnd="@dimen/size_16"
+    android:textSize="@dimen/size_15_sp"
+    tools:text="Filtro" />

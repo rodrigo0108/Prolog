@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/legendLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/legendText1"
+        style="@style/style_day_legend_regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Lun" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/legendText2"
+        style="@style/style_day_legend_regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/legendText3"
+        style="@style/style_day_legend_regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mié" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/legendText4"
+        style="@style/style_day_legend_regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Jue" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/legendText5"
+        style="@style/style_day_legend_regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Vie" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/legendText6"
+        style="@style/style_day_legend_regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sáb" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/legendText7"
+        style="@style/style_day_legend_regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dom" />
+
+</LinearLayout>

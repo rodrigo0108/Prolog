@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/circleView"
+            android:layout_width="@dimen/size_67"
+            android:layout_height="@dimen/size_67"
+            android:layout_marginStart="@dimen/size_28"
+            android:layout_marginTop="@dimen/size_28"
+            android:background="@drawable/bg_circle_course"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/abbreviateNameCourseTextView"
+            style="@style/style_title_primary_22_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/circleView"
+            app:layout_constraintEnd_toEndOf="@+id/circleView"
+            app:layout_constraintStart_toStartOf="@+id/circleView"
+            app:layout_constraintTop_toTopOf="@+id/circleView"
+            tools:text="Fis" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fullNameCourseTextView"
+            style="@style/style_title_secondary_22_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_17"
+            android:layout_marginEnd="@dimen/size_5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@+id/teacherNameTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/circleView"
+            app:layout_constraintTop_toTopOf="@+id/circleView"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Física" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/teacherNameTextView"
+            style="@style/style_description_15_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/circleView"
+            app:layout_constraintEnd_toEndOf="@+id/fullNameCourseTextView"
+            app:layout_constraintStart_toStartOf="@+id/fullNameCourseTextView"
+            app:layout_constraintTop_toBottomOf="@+id/fullNameCourseTextView"
+            tools:text="Prof: Cristian Vizcaya" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myClassCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_22"
+            android:layout_marginTop="@dimen/size_40"
+            android:layout_marginEnd="@dimen/size_22"
+            app:cardCornerRadius="@dimen/size_17"
+            app:layout_constraintTop_toBottomOf="@+id/circleView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size_17">
+
+                <View
+                    android:id="@+id/circleCourseView"
+                    android:layout_width="@dimen/size_67"
+                    android:layout_height="@dimen/size_67"
+                    android:background="@drawable/bg_circle_course"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/courseImageView"
+                    style="@style/style_title_primary_22_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/prolog_primary_color_dark"
+                    app:layout_constraintBottom_toBottomOf="@+id/circleCourseView"
+                    app:layout_constraintEnd_toEndOf="@+id/circleCourseView"
+                    app:layout_constraintStart_toStartOf="@+id/circleCourseView"
+                    app:layout_constraintTop_toTopOf="@+id/circleCourseView"
+                    app:srcCompat="@drawable/ic_course"
+                    tools:text="Fis" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/myCoursesTextView"
+                    style="@style/style_title_secondary_17_bold"
+                    android:textColor="@color/prolog_primary_color_dark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_17"
+                    android:layout_marginEnd="@dimen/size_5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/my_class"
+                    app:layout_constraintBottom_toTopOf="@+id/keepUpDateTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/arrowImageView"
+                    app:layout_constraintStart_toEndOf="@+id/circleCourseView"
+                    app:layout_constraintTop_toTopOf="@+id/circleCourseView"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/keepUpDateTextView"
+                    style="@style/style_description_14_regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keep_up_to_date_with_what_you_need"
+                    app:layout_constraintBottom_toBottomOf="@+id/circleCourseView"
+                    app:layout_constraintEnd_toEndOf="@+id/myCoursesTextView"
+                    app:layout_constraintStart_toStartOf="@+id/myCoursesTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/myCoursesTextView" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrowImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_10"
+                    android:src="@drawable/ic_right_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myAttendanceCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_22"
+            android:layout_marginTop="@dimen/size_25"
+            android:layout_marginEnd="@dimen/size_22"
+            app:cardCornerRadius="@dimen/size_17"
+            app:layout_constraintTop_toBottomOf="@+id/myClassCardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size_17">
+
+                <View
+                    android:id="@+id/circleAttendanceView"
+                    android:layout_width="@dimen/size_67"
+                    android:layout_height="@dimen/size_67"
+                    android:background="@drawable/bg_circle_course"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/attendanceImageView"
+                    style="@style/style_title_primary_22_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/prolog_primary_color_dark"
+                    app:layout_constraintBottom_toBottomOf="@+id/circleAttendanceView"
+                    app:layout_constraintEnd_toEndOf="@+id/circleAttendanceView"
+                    app:layout_constraintStart_toStartOf="@+id/circleAttendanceView"
+                    app:layout_constraintTop_toTopOf="@+id/circleAttendanceView"
+                    app:srcCompat="@drawable/ic_attendance"
+                    tools:text="Fis" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/myAttendanceTextView"
+                    style="@style/style_title_secondary_17_bold"
+                    android:textColor="@color/prolog_primary_color_dark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_17"
+                    android:layout_marginEnd="@dimen/size_5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/my_attendance"
+                    app:layout_constraintBottom_toTopOf="@+id/checkYourSchoolAttendanceTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow2ImageView"
+                    app:layout_constraintStart_toEndOf="@+id/circleAttendanceView"
+                    app:layout_constraintTop_toTopOf="@+id/circleAttendanceView"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/checkYourSchoolAttendanceTextView"
+                    style="@style/style_description_14_regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_your_school_attendance"
+                    app:layout_constraintBottom_toBottomOf="@+id/circleAttendanceView"
+                    app:layout_constraintEnd_toEndOf="@+id/myAttendanceTextView"
+                    app:layout_constraintStart_toStartOf="@+id/myAttendanceTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/myAttendanceTextView" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrow2ImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_10"
+                    android:src="@drawable/ic_right_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myMarkCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_22"
+            android:layout_marginTop="@dimen/size_25"
+            android:layout_marginEnd="@dimen/size_22"
+            app:cardCornerRadius="@dimen/size_17"
+            app:layout_constraintTop_toBottomOf="@+id/myAttendanceCardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size_17">
+
+                <View
+                    android:id="@+id/myGradesView"
+                    android:layout_width="@dimen/size_67"
+                    android:layout_height="@dimen/size_67"
+                    android:background="@drawable/bg_circle_course"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/gradeImageView"
+                    style="@style/style_title_primary_22_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/prolog_primary_color_dark"
+                    app:layout_constraintBottom_toBottomOf="@+id/myGradesView"
+                    app:layout_constraintEnd_toEndOf="@+id/myGradesView"
+                    app:layout_constraintStart_toStartOf="@+id/myGradesView"
+                    app:layout_constraintTop_toTopOf="@+id/myGradesView"
+                    app:srcCompat="@drawable/ic_grade"
+                    tools:text="Fis" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/myGradesTextView"
+                    style="@style/style_title_secondary_17_bold"
+                    android:textColor="@color/prolog_primary_color_dark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_17"
+                    android:layout_marginEnd="@dimen/size_5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/my_grades"
+                    app:layout_constraintBottom_toTopOf="@+id/checkYourNotesTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow3ImageView"
+                    app:layout_constraintStart_toEndOf="@+id/myGradesView"
+                    app:layout_constraintTop_toTopOf="@+id/myGradesView"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/checkYourNotesTextView"
+                    style="@style/style_description_14_regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_the_marks_you_have_achieved"
+                    app:layout_constraintBottom_toBottomOf="@+id/myGradesView"
+                    app:layout_constraintEnd_toEndOf="@+id/myGradesTextView"
+                    app:layout_constraintStart_toStartOf="@+id/myGradesTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/myGradesTextView" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrow3ImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_10"
+                    android:src="@drawable/ic_right_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

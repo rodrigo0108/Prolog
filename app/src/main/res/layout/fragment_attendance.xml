@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/circleView"
+            android:layout_width="@dimen/size_67"
+            android:layout_height="@dimen/size_67"
+            android:layout_marginStart="@dimen/size_28"
+            android:layout_marginTop="@dimen/size_28"
+            android:background="@drawable/bg_circle_course"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/abbreviateNameCourseTextView"
+            style="@style/style_title_primary_22_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/circleView"
+            app:layout_constraintEnd_toEndOf="@+id/circleView"
+            app:layout_constraintStart_toStartOf="@+id/circleView"
+            app:layout_constraintTop_toTopOf="@+id/circleView"
+            tools:text="Fis" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fullNameCourseTextView"
+            style="@style/style_title_secondary_22_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_17"
+            android:layout_marginEnd="@dimen/size_5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@+id/teacherNameTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/circleView"
+            app:layout_constraintTop_toTopOf="@+id/circleView"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Física" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/teacherNameTextView"
+            style="@style/style_description_15_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/circleView"
+            app:layout_constraintEnd_toEndOf="@+id/fullNameCourseTextView"
+            app:layout_constraintStart_toStartOf="@+id/fullNameCourseTextView"
+            app:layout_constraintTop_toBottomOf="@+id/fullNameCourseTextView"
+            tools:text="Prof: Cristian Vizcaya" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/size_20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/size_20" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/calendarCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_25"
+            app:cardCornerRadius="@dimen/size_17"
+            app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/circleView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/containerLeftFrameLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_10"
+                    android:padding="@dimen/size_10"
+                    app:layout_constraintBottom_toTopOf="@+id/calendarView"
+                    app:layout_constraintEnd_toStartOf="@+id/monthYearTextView"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_left_arrow" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monthYearTextView"
+                    style="@style/style_subtitle_18_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/containerRightFrameLayout"
+                    app:layout_constraintStart_toEndOf="@+id/containerLeftFrameLayout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Agosto 2020" />
+
+                <FrameLayout
+                    android:id="@+id/containerRightFrameLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_10"
+                    android:padding="@dimen/size_10"
+                    app:layout_constraintBottom_toTopOf="@+id/calendarView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/monthYearTextView"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_right_arrow" />
+                </FrameLayout>
+
+                <com.kizitonwose.calendarview.CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10"
+                    app:cv_dayViewResource="@layout/calendar_day_layout"
+                    app:cv_monthHeaderResource="@layout/header_calendar"
+                    app:cv_orientation="horizontal"
+                    app:cv_scrollMode="paged"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/monthYearTextView" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/permissionLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:layout_marginBottom="@dimen/size_20"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/absenceLinearLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView">
+
+                    <View
+                        android:id="@+id/permissionView"
+                        android:layout_width="@dimen/size_6"
+                        android:layout_height="@dimen/size_6"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/size_6"
+                        android:background="@drawable/bg_circle_course"
+                        android:backgroundTint="@color/prolog_primary_soft_color" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/permissionTextView"
+                        style="@style/style_mini_title_12_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/permissions" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/absenceLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/presentLinearLayout"
+                    app:layout_constraintStart_toEndOf="@+id/permissionLinearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView">
+
+                    <View
+                        android:id="@+id/absenceView"
+                        android:layout_width="@dimen/size_6"
+                        android:layout_height="@dimen/size_6"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/size_6"
+                        android:background="@drawable/bg_circle_course"
+                        android:backgroundTint="@color/prolog_red" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/absenceTextView"
+                        style="@style/style_mini_title_12_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/absences" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/presentLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/absenceLinearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView">
+
+                    <View
+                        android:id="@+id/presentView"
+                        android:layout_width="@dimen/size_6"
+                        android:layout_height="@dimen/size_6"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/size_6"
+                        android:background="@drawable/bg_circle_course"
+                        android:backgroundTint="@color/prolog_primary_color_dark" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/presentTextView"
+                        style="@style/style_mini_title_12_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/present" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/monthlyTotalTextView"
+            style="@style/style_title_secondary_15_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_20"
+            android:gravity="center_horizontal"
+            android:text="@string/monthly_total"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/calendarCardView" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/attendancesCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_7"
+            app:cardCornerRadius="@dimen/size_17"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/monthlyTotalTextView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/checkImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:layout_marginTop="@dimen/size_12"
+                    android:layout_marginBottom="@dimen/size_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_check" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/attendancesTextView"
+                    style="@style/style_subtitle_18_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15"
+                    android:text="@string/attendances"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/daysCompletedTextView"
+                    app:layout_constraintStart_toEndOf="@+id/checkImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/daysCompletedTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="15/"
+                    android:textColor="@color/prolog_secondary_color"
+                    android:textSize="@dimen/size_28_sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/daysToBeCompletedTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/daysToBeCompletedTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_20"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="20"
+                    android:textColor="#CBCBCB"
+                    android:textSize="@dimen/size_28_sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/absencesCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_15"
+            app:cardCornerRadius="@dimen/size_17"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/attendancesCardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/absenceImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:layout_marginTop="@dimen/size_12"
+                    android:layout_marginBottom="@dimen/size_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_absence" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/absence2TextView"
+                    style="@style/style_subtitle_18_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15"
+                    android:text="@string/absences"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/absencesNumberTextView"
+                    app:layout_constraintStart_toEndOf="@+id/absenceImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/absencesNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_20"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="1"
+                    android:textColor="@color/prolog_secondary_color"
+                    android:textSize="@dimen/size_28_sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/permissionCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_15"
+            android:layout_marginBottom="@dimen/size_15"
+            app:cardCornerRadius="@dimen/size_17"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/absencesCardView"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/permissionImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:layout_marginTop="@dimen/size_12"
+                    android:layout_marginBottom="@dimen/size_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_permits" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/permission2TextView"
+                    style="@style/style_subtitle_18_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_15"
+                    android:text="@string/permissions"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/permissionsNumberTextView"
+                    app:layout_constraintStart_toEndOf="@+id/permissionImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/permissionsNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_20"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="2"
+                    android:textColor="@color/prolog_secondary_color"
+                    android:textSize="@dimen/size_28_sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

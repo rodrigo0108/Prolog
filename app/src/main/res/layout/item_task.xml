@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/size_30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/size_30" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/taskTextView"
+        style="@style/style_subtitle_14_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_15"
+        android:layout_marginEnd="@dimen/size_15"
+        app:layout_constraintBottom_toTopOf="@+id/deliveryTextView"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/plusCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tarea 1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/deliveryTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_15"
+        android:layout_marginEnd="@dimen/size_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/plusCardView"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/taskTextView"
+        tools:text="Delivery 15 April - 3:00" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/downloadCardView"
+        android:layout_width="@dimen/size_31"
+        android:layout_height="@dimen/size_31"
+        android:shape="ring"
+        app:cardCornerRadius="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:tint="@color/prolog_secondary_color"
+            app:srcCompat="@drawable/ic_download_header" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/plusCardView"
+        android:layout_width="@dimen/size_31"
+        android:layout_height="@dimen/size_31"
+        android:shape="ring"
+        app:cardCornerRadius="75dp"
+        android:layout_marginEnd="@dimen/size_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/downloadCardView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:tint="@color/prolog_secondary_color"
+            app:srcCompat="@drawable/ic_plus" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

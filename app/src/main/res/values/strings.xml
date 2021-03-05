@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Prolog</string>
+    <string name="email">Correo electrónico</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Inicia sesión</string>
+    <string name="your_digital_platform">Tu plataforma\neducativa digital</string>
+    <string name="enter">Ingresar</string>
+    <string name="recent_books">Libros recientes</string>
+
+    <string name="title_home">Inicio</string>
+    <string name="title_course">Cursos</string>
+    <string name="title_library">Librería</string>
+    <string name="title_calendar">Calendario</string>
+    <string name="expand_your_knowledge_by_reading">Expande tu conocimiento con la lectura</string>
+    <string name="see_all">Ver todo</string>
+    <string name="activities">Actividades</string>
+    <string name="soon_you_will_be_able_to_visualise_courses_for_you">Proximamente podrás visualizar\ncursos para ti</string>
+    <string name="keep_up_to_date_with_what_you_need">Mantente al día con lo necesario para tu clase</string>
+    <string name="check_your_school_attendance">Revisa el registro de tu asistencia escolar</string>
+    <string name="check_the_marks_you_have_achieved">Revisa las notas que has obtenido en tus evaluaciones</string>
+    <string name="my_courses">Mis cursos</string>
+    <string name="my_calendar">Mi calendario</string>
+    <string name="subtitle_break">Receso</string>
+    <string name="link_to_enter">Link de ingreso</string>
+    <string name="my_profile">Mi perfil</string>
+    <string name="my_class">Mis clases</string>
+    <string name="my_grades">Mis notas</string>
+    <string name="my_attendance">Mi asistencia</string>
+    <string name="material">Material</string>
+    <string name="tasks">Tareas</string>
+    <string name="videos">Videos</string>
+    <string name="download_all">Descargar todo</string>
+    <string name="two_months">%1$s - %2$s</string>
+    <string name="month_year">%1$s %2$s</string>
+    <string name="permissions">Permisos</string>
+    <string name="absences">Ausencias</string>
+    <string name="present">Presente</string>
+    <string name="monthly_total">Total mensual</string>
+    <string name="attendances">Asistencias</string>
+    <string name="weighted_total">Total ponderado</string>
+    <string name="total">Total</string>
+    <string name="evaluations">Evaluaciones</string>
+    <string name="download_the_content_of_your_interest">Descarga el contenido de tu interés</string>
+    <string name="description">Descripción</string>
+    <string name="qualification_criteria">Criterios de calificación</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="loading">Cargando</string>
+
+</resources>

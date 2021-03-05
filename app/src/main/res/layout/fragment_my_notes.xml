@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/circleView"
+            android:layout_width="@dimen/size_67"
+            android:layout_height="@dimen/size_67"
+            android:layout_marginStart="@dimen/size_28"
+            android:layout_marginTop="@dimen/size_28"
+            android:background="@drawable/bg_circle_course"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/abbreviateNameCourseTextView"
+            style="@style/style_title_primary_22_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/circleView"
+            app:layout_constraintEnd_toEndOf="@+id/circleView"
+            app:layout_constraintStart_toStartOf="@+id/circleView"
+            app:layout_constraintTop_toTopOf="@+id/circleView"
+            tools:text="Fis" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fullNameCourseTextView"
+            style="@style/style_title_secondary_22_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_17"
+            android:layout_marginEnd="@dimen/size_5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@+id/teacherNameTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/circleView"
+            app:layout_constraintTop_toTopOf="@+id/circleView"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Física" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/teacherNameTextView"
+            style="@style/style_description_15_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/circleView"
+            app:layout_constraintEnd_toEndOf="@+id/fullNameCourseTextView"
+            app:layout_constraintStart_toStartOf="@+id/fullNameCourseTextView"
+            app:layout_constraintTop_toBottomOf="@+id/fullNameCourseTextView"
+            tools:text="Prof: Cristian Vizcaya" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/size_20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/size_20" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weightedTotalScoreCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_30"
+            app:cardCornerRadius="@dimen/size_17"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/circleView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/weightedTotalScoreTextView"
+                    style="@style/style_title_secondary_33_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:layout_marginBottom="@dimen/size_20"
+                    android:text="18"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/separator1View"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:background="@color/prolog_background_brown_13_transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/weightedTotalScoreTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/weightedTotalTextView"
+                    style="@style/style_subtitle_18_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:text="@string/weighted_total"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/downloadCardView"
+                    app:layout_constraintStart_toEndOf="@+id/separator1View"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_goneMarginStart="@dimen/size_10" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/downloadCardView"
+                    android:layout_width="@dimen/size_31"
+                    android:layout_height="@dimen/size_31"
+                    android:layout_marginEnd="@dimen/size_20"
+                    android:shape="ring"
+                    app:cardCornerRadius="75dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:tint="@color/prolog_secondary_color"
+                        app:srcCompat="@drawable/ic_download_header" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/totalScoreCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_20"
+            app:cardCornerRadius="@dimen/size_17"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/weightedTotalScoreCardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/totalScoreTextView"
+                    style="@style/style_title_secondary_33_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:layout_marginBottom="@dimen/size_20"
+                    android:text="18"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/separator2View"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:background="@color/prolog_background_brown_13_transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/totalScoreTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/totalTextView"
+                    style="@style/style_subtitle_18_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:text="@string/total"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/download2CardView"
+                    app:layout_constraintStart_toEndOf="@+id/separator2View"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_goneMarginStart="@dimen/size_10" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/download2CardView"
+                    android:layout_width="@dimen/size_31"
+                    android:layout_height="@dimen/size_31"
+                    android:layout_marginEnd="@dimen/size_20"
+                    android:shape="ring"
+                    app:cardCornerRadius="75dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:tint="@color/prolog_secondary_color"
+                        app:srcCompat="@drawable/ic_download_header" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/selectMonthConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke_button"
+            android:layout_marginTop="@dimen/size_25"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/totalScoreCardView">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mes de abril"
+                android:textSize="@dimen/size_15_sp"
+                android:fontFamily="@font/opensans_regular"
+                android:textColor="@color/prolog_primary_color_dark"
+                android:layout_marginTop="@dimen/size_12"
+                android:layout_marginBottom="@dimen/size_12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_arrow_select"
+                android:layout_marginEnd="@dimen/size_30"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/evaluationsTextView"
+            style="@style/style_title_secondary_15_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/evaluations"
+            android:layout_marginTop="@dimen/size_25"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/selectMonthConstraintLayout"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/evaluationRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_13"
+            android:layout_marginBottom="@dimen/size_13"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/evaluationsTextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/item_evaluation"
+            tools:itemCount="2"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

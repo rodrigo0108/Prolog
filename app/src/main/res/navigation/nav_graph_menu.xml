@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_menu"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.heyoh.prolog.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.heyoh.prolog.course.CourseFragment"
+        android:label="CourseFragment"
+        tools:layout="@layout/fragment_course">
+        <action
+            android:id="@+id/navigate_to_courseOptionsFragment"
+            app:destination="@id/courseOptionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.heyoh.prolog.calendar.CalendarFragment"
+        android:label="CalendarFragment"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.heyoh.prolog.library.LibraryFragment"
+        android:label="LibraryFragment"
+        tools:layout="@layout/fragment_library"/>
+    <fragment
+        android:id="@+id/courseOptionsFragment"
+        android:name="com.heyoh.prolog.course.CourseOptionsFragment"
+        android:label="CourseOptionsFragment"
+        tools:layout="@layout/fragment_course_options" >
+        <argument
+            android:name="course"
+            app:argType="com.heyoh.model.Course" />
+        <action
+            android:id="@+id/navigate_to_myClassesFragment"
+            app:destination="@id/myClassesFragment" />
+        <action
+            android:id="@+id/navigate_to_attendanceFragment"
+            app:destination="@id/attendanceFragment" />
+        <action
+            android:id="@+id/navigate_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myClassesFragment"
+        android:name="com.heyoh.prolog.classes.MyClassesFragment"
+        android:label="MyClassesFragment"
+        tools:layout="@layout/fragment_my_classes">
+        <argument
+            android:name="course"
+            app:argType="com.heyoh.model.Course" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="com.heyoh.prolog.attendance.AttendanceFragment"
+        android:label="AttendanceFragment"
+        tools:layout="@layout/fragment_attendance">
+        <argument
+            android:name="course"
+            app:argType="com.heyoh.model.Course" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.heyoh.prolog.notes.NotesFragment"
+        android:label="NotesFragment"
+        tools:layout="@layout/fragment_my_notes">
+        <argument
+            android:name="course"
+            app:argType="com.heyoh.model.Course" />
+    </fragment>
+
+</navigation>
