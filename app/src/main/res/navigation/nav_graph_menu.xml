@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.heyoh.prolog.home.HomeFragment"
+        android:name="com.heyoh.prolog.feature.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/courseFragment"
-        android:name="com.heyoh.prolog.course.CourseFragment"
+        android:name="com.heyoh.prolog.feature.course.CourseFragment"
         android:label="CourseFragment"
         tools:layout="@layout/fragment_course">
         <action
@@ -21,17 +21,17 @@
     </fragment>
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.heyoh.prolog.calendar.CalendarFragment"
+        android:name="com.heyoh.prolog.feature.calendar.CalendarFragment"
         android:label="CalendarFragment"
         tools:layout="@layout/fragment_calendar" />
     <fragment
         android:id="@+id/libraryFragment"
-        android:name="com.heyoh.prolog.library.LibraryFragment"
+        android:name="com.heyoh.prolog.feature.library.LibraryFragment"
         android:label="LibraryFragment"
         tools:layout="@layout/fragment_library"/>
     <fragment
         android:id="@+id/courseOptionsFragment"
-        android:name="com.heyoh.prolog.course.CourseOptionsFragment"
+        android:name="com.heyoh.prolog.feature.course.CourseOptionsFragment"
         android:label="CourseOptionsFragment"
         tools:layout="@layout/fragment_course_options" >
         <argument
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/myClassesFragment"
-        android:name="com.heyoh.prolog.classes.MyClassesFragment"
+        android:name="com.heyoh.prolog.feature.classes.MyClassesFragment"
         android:label="MyClassesFragment"
         tools:layout="@layout/fragment_my_classes">
         <argument
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/attendanceFragment"
-        android:name="com.heyoh.prolog.attendance.AttendanceFragment"
+        android:name="com.heyoh.prolog.feature.attendance.AttendanceFragment"
         android:label="AttendanceFragment"
         tools:layout="@layout/fragment_attendance">
         <argument
@@ -67,7 +67,7 @@
     </fragment>
     <fragment
         android:id="@+id/notesFragment"
-        android:name="com.heyoh.prolog.notes.NotesFragment"
+        android:name="com.heyoh.prolog.feature.notes.NotesFragment"
         android:label="NotesFragment"
         tools:layout="@layout/fragment_my_notes">
         <argument

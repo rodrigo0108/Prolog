@@ -61,6 +61,10 @@
         <item name="android:textColor">@color/prolog_primary_color_dark</item>
         <item name="android:textSize">@dimen/size_18_sp</item>
     </style>
+    <style name="style_subtitle_16_bold" parent="style_subtitle_18_bold">
+        <item name="android:textSize">@dimen/size_16_sp</item>
+    </style>
+
     <style name="style_subtitle_15_bold" parent="style_subtitle_18_bold">
         <item name="android:textSize">@dimen/size_15_sp</item>
     </style>

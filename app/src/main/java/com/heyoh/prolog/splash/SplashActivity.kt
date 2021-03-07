@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.heyoh.prolog.databinding.ActivitySplashBinding
-import com.heyoh.prolog.login.LoginActivity
+import com.heyoh.prolog.feature.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 

@@ -60,36 +60,24 @@
             app:layout_constraintTop_toBottomOf="@+id/fullNameCourseTextView"
             tools:text="Prof: Cristian Vizcaya" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/monthTextView"
-            style="@style/style_subtitle_20_bold"
+        <LinearLayout
+            android:id="@+id/rangeDateLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/size_30"
             android:layout_marginTop="@dimen/size_17"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/circleView"
-            tools:text="Agosto" />
-
-        <LinearLayout
-            android:id="@+id/rangeDateLinearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/size_10"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/monthTextView"
-            app:layout_constraintStart_toEndOf="@+id/monthTextView"
-            app:layout_constraintTop_toBottomOf="@+id/circleView"
-            app:layout_constraintTop_toTopOf="@+id/monthTextView">
+            android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/dayRangeTextView"
-                style="@style/style_description_14_regular"
+                android:id="@+id/monthTextView"
+                style="@style/style_subtitle_20_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:alpha="0.8"
-                android:textSize="@dimen/size_13_sp"
-                tools:text="/ 20 feb al 25 feb" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circleView"
+                tools:text="Agosto" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"

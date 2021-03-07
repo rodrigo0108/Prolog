@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/prolog_background_color"
     android:layout_height="match_parent"
-    tools:context=".profile.ProfileActivity">
+    tools:context=".feature.profile.ProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbarConstraintLayout"

@@ -41,21 +41,42 @@ android {
 
 dependencies {
 
+    def lifecycle_version = "2.3.0"
+    def nav_version = "2.3.3"
+    def koin_version = "2.2.2"
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
     //coreLibraryDesugaring
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.1'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
     // Picasso
     api "com.squareup.picasso:picasso:2.71828"
     //CalendarView
     api 'com.github.kizitonwose:CalendarView:1.0.1'
     //Lottie
     implementation 'com.airbnb.android:lottie:3.6.1'
+    // ViewModel
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LiveData
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    // RunTime
+    api "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    // Coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
+    //Navigation - Kotlin
+    api "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    api "androidx.navigation:navigation-ui-ktx:$nav_version"
+    //Koin
+    api "org.koin:koin-android-viewmodel:$koin_version"
+    api "org.koin:koin-android:$koin_version"
+
+    implementation 'androidx.fragment:fragment-ktx:1.3.0'
+    implementation 'androidx.activity:activity-ktx:1.2.0'
+
+    implementation project(":appdata")
 
     testImplementation 'junit:junit:4.+'
     implementation project(path: ':model')

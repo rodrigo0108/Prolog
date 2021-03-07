@@ -30,6 +30,7 @@
     <string name="material">Material</string>
     <string name="tasks">Tareas</string>
     <string name="videos">Videos</string>
+    <string name="download">Descargar</string>
     <string name="download_all">Descargar todo</string>
     <string name="two_months">%1$s - %2$s</string>
     <string name="month_year">%1$s %2$s</string>
@@ -46,5 +47,11 @@
     <string name="qualification_criteria">Criterios de calificación</string>
     <string name="logout">Cerrar sesión</string>
     <string name="loading">Cargando</string>
+    <string name="download_your_book_in_pdf_format">Descarga tu libro en formato PDF</string>
 
+    <string name="login_failed">Inicio de sesión fallido</string>
+    <string name="server_error">Hubo un error con el servicio</string>
+    <string name="try_again">Vuelva a intentarlo</string>
+    <string name="understood">Entendido</string>
+    <string name="my_library">Mi biblioteca</string>
 </resources>
